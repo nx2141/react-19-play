@@ -11,3 +11,7 @@ const dadJokePromise: Promise<DadJoke> = fetch("https://icanhazdadjoke.com/", {
 export function fetchDadJoke() {
   return dadJokePromise;          // 常に同じ Promise を返す
 }
+
+//開発メモ
+// cache() はサーバー用：クライアントで使うとリクエストが止まらない。
+// そのため、モジュールスコープに Promise を固定化している。
